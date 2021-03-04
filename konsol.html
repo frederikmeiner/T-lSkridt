@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tæl Skridt: Konsol</title>
+    <meta name="author" content="Emil, Frederik & Morten">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html"><img src="img/logo-white-width.png" alt="Taelskridt logo"></a>
+            </div>
+            <div class="navtext" id="nav1"><a href="#">OM</a></div>
+            <div class="navtext" id="nav2"><a href="#">SPØRGSMÅL OG SVAR</a></div>
+            <div class="navtext" id="nav3"><a href="#">MATRIALER</a></div>
+            <div class="navtext" id="nav4"><a href="#">SHOP</a></div>
+            <div class="navtext" id="nav5"><a href="#">PRISER</a></div>
+            <div class="navtext" id="nav6"><a href="#">LOG UD</a></div>
+        </nav>
+    </header>
+    <main>
+        <div class="outer">
+            <div class="oversigt">
+                <img src="img/header" alt="Billede af Oversigt">
+            </div>
+            <div class="tab">
+
+                <ul>
+                    <li>
+                        <a class="tab-active" data-index="0" href="#">Mål</a>
+                    </li>
+                    <li>
+                        <a data-index="1" href="#">Rediger hold</a>
+                    </li>
+                    <li>
+                        <a data-index="2" href="#">Indtast Skridt</a>
+                    </li>
+                    <li>
+                        <a data-index="3" href="#">Faktura</a>
+                    </li>
+                </ul>
+
+                <div class="content">
+                    <div class="content-active">
+                        <!-- MÅL -->
+                        <section class="tabs_header">
+                            <h2>Mål</h2>
+                        </section>
+                        <!-- KM GÅET -->
+                        <section class="maal">
+                            <h2>KM gået:</h2>
+                            <section class="km_alene">
+                                <section class="samlet">
+                                    <img src="img/achievements/antalKM_komplet_rank1.png" alt="KM inaktiv">
+                                    <p>10.000 skridt</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/antalKM_komplet_rank2.png" alt="KM inaktiv">
+                                    <p>50.000 skridt</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/antalKM_aktiv_rank3.png" alt="KM inaktiv">
+                                    <p>100.000 skridt</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/antalKM_inaktiv_rank4.png" alt="KM inaktiv">
+                                    <p>120.000 skridt</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/antalKM_inaktiv_rank5.png" alt="KM inaktiv">
+                                    <p>140.000 skridt</p>
+                                </section>
+                            </section>
+                        </section>
+
+                        <!-- -->
+                        <section class="maal">
+                            <h2>Antal dage aktiv:</h2>
+                            <section class="km_alene">
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_komplet_rank1.png" alt="dage aktiv">
+                                    <p>1 Dag</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_komplet_rank2.png" alt="dage aktiv">
+                                    <p>4 Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_komplet_rank3.png" alt="dage aktiv">
+                                    <p>8 Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_aktiv_rank4.png" alt="dage aktiv">
+                                    <p>1o Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_inaktiv_rank5.png" alt="dage aktiv">
+                                    <p>Alle dage</p>
+                                </section>
+                            </section>
+                        </section>
+
+                        <!-- GÅET SAMMEN -->
+                        <section class="maal">
+                            <h2>Antal dage gået sammen med dit hold:</h2>
+                            <section class="km_alene">
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_mp_komplet_rank1.png" alt="dage aktiv">
+                                    <p>1 Dag</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_mp_komplet_rank2.png" alt="dage aktiv">
+                                    <p>4 Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_mp_aktiv_rank3.png" alt="dage aktiv">
+                                    <p>8 Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_mp_inaktiv_rank4.png" alt="dage aktiv">
+                                    <p>1o Dage</p>
+                                </section>
+                                <section class="samlet">
+                                    <img src="img/achievements/dage_mp_inaktiv_rank5.png" alt="dage aktiv">
+                                    <p>Alle dage</p>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+
+                    <div class="tabs_grid1">
+                        <article class="rediger1">
+                            <section class="hold">
+                                <section class="tabs_header">
+                                    <h2>Opret et vinder hold</h2>
+                                </section>
+
+                                <section class="deltagere">
+                                    <label for="HoldNavn">Holdnavn:</label>
+                                    <input type="text">
+                                    <button>Opret Hold</button>
+                                </section>
+
+                            </section>
+                        </article>
+
+                        <article class="rediger2">
+                            <section class="hold">
+                                <section class="tabs_header">
+                                    <h2>Tilføj deltagere til dit hold</h2>
+                                </section>
+
+                                <section class="deltagere">
+                                    <label for="deltager">Holdkammerats Email:</label>
+                                    <input type="text">
+                                    <button>Tilføj deltager</button>
+                                </section>
+
+                            </section>
+                        </article>
+
+                    </div>
+
+                    <div class="skridt">
+                        <article class="skridt">
+
+                            <section id="indtast">
+                                <h1>Indtast skridt</h1>
+                                <section id="uge1">
+                                    <h2>Uge 41</h2>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Mandag
+                                            </td>
+                                            <td>
+                                                Tirsdag
+                                            </td>
+                                            <td>
+                                                Onsdag
+                                            </td>
+                                            <td>
+                                                Torsdag
+                                            </td>
+                                            <td>
+                                                Fredag
+                                            </td>
+                                            <td>
+                                                Lørdag
+                                            </td>
+                                            <td>
+                                                Søndag
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtman1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridttir1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtons1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridttor1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtfre1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtlør1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtsøn1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnman1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregntir1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnons1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregntor1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnfre1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnlør1">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnsøn1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                                <section id="uge2">
+                                    <h2>Uge 42</h2>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Mandag
+                                            </td>
+                                            <td>
+                                                Tirsdag
+                                            </td>
+                                            <td>
+                                                Onsdag
+                                            </td>
+                                            <td>
+                                                Torsdag
+                                            </td>
+                                            <td>
+                                                Fredag
+                                            </td>
+                                            <td>
+                                                Lørdag
+                                            </td>
+                                            <td>
+                                                Søndag
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtman2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridttir2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtons2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridttor2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtfre2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtlør2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Antal skridt" id="skridtsøn2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnman2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregntir2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnons2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregntor2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnfre2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnlør2">
+                                            </td>
+                                            <td>
+                                                <input placeholder="Omregn" id="omregnsøn2">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                                <button>Gem</button>
+                            </section>
+                        </article>
+
+                    </div>
+
+                    <div>
+                        <h2>Her kan du redigere dine faktureringsoplysninger</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal_content">
+                <!--Form til oprettelse af bruger-->
+                <div class="container">
+                    <div class="header">
+                        <h2>Faktureringsoplysninger</h2>
+                    </div>
+                    <form id="form" class="form">
+                        <div class="form_grid_1">
+                            <!--NAVN -->
+                            <div class="form-control">
+                                <label for="username">Navn</label>
+                                <input type="text" placeholder="Navn" id="username" />
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+
+                            <!--EMAIL-->
+                            <div class="form-control">
+                                <label for="username">Email</label>
+                                <input type="email" placeholder="f.eks@mail.dk" id="email" />
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+                            <!--NR-->
+                            <div class="form-control">
+                                <label>Postnr.</label>
+                                <input type="nummer" placeholder="Indtast Postnr." id="nummer">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+                        </div>
+                        <div class="form_grid_2">
+                            <!--FIRMA-->
+                            <div class="form-control">
+                                <label>Firma</label>
+                                <input type="firma" placeholder="Indtast firma" id="firma">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+                            <!--KODE-->
+                            <div class="form-control">
+                                <label>Addresse</label>
+                                <input type="firma" placeholder="Indtast addresse" id="firma">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+                            <!--GENTAG KODE-->
+                            <div class="form-control">
+                                <label>By</label>
+                                <input type="firma" placeholder="Indtast By" id="firma">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Fejl besked</small>
+                            </div>
+                        </div>
+                        <div class="form_grid_3">
+                            <section id="radio">
+                                <label>Betalingsmetode:<br></label>
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Betalingskort/Netbank</label><br>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">E-fakturering (EAN)</label><br>
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Få tilsendt en faktura</label><br>
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Betalingskode</label>
+                            </section>
+
+                            <p class="besked">Du vil få tilsendt en email med en betalingsformular, udfra hvilken betalingsmetode du har valgt.</p>
+
+                        </div>
+                        <div class="modalKnap" class="knap">
+                            <button>Gem</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--RUTER-->
+        <section class="ruter">
+            <h2>Foreslåede ruter</h2>
+            
+            <section id="map1"></section>
+         
+            <section id="map2"></section>
+       
+            <section id="map3"></section>
+   
+        </section>
+    </main>
+    <footer></footer>
+
+    <!-- load jQuery library -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- load JavaScript -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+
+    <script src="js/js.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var widget = $('.tab');
+
+            var tabs = widget.find('ul a'),
+                content = widget.find('.content > div');
+
+            tabs.on('click', function(e) {
+
+                e.preventDefault();
+
+                // Get the data-index attribute, and show the matching content div
+
+                var index = $(this).data('index');
+
+                tabs.removeClass('tab-active');
+                content.removeClass('content-active');
+
+                $(this).addClass('tab-active');
+                content.eq(index).addClass('content-active');
+
+            });
+            mapboxgl.accessToken = 'pk.eyJ1IjoibmFnZ29yYXRoIiwiYSI6ImNrZnFraHBkNTBidXYydG8wcnNpd2diY2wifQ.XACaF-Waep-sSnedONVNlg';
+            var map = new mapboxgl.Map({
+                container: 'map1', // container id
+                style: 'mapbox://styles/naggorath/ckggctai900d119ntb6jfzwwi', // style URL
+                center: [10.162, 56.148], // starting position [lng, lat]
+
+                zoom: 13 // starting zoom
+            });
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoibmFnZ29yYXRoIiwiYSI6ImNrZnFraHBkNTBidXYydG8wcnNpd2diY2wifQ.XACaF-Waep-sSnedONVNlg';
+            var map = new mapboxgl.Map({
+                container: 'map2', // container id
+                style: 'mapbox://styles/naggorath/ckggctai900d119ntb6jfzwwi', // style URL
+                center: [10.215, 56.117], // starting position [lng, lat]
+
+                zoom: 13 // starting zoom
+            });
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoibmFnZ29yYXRoIiwiYSI6ImNrZnFraHBkNTBidXYydG8wcnNpd2diY2wifQ.XACaF-Waep-sSnedONVNlg';
+            var map = new mapboxgl.Map({
+                container: 'map3', // container id
+                style: 'mapbox://styles/naggorath/ckggctai900d119ntb6jfzwwi', // style URL
+                center: [12.563, 55.686], // starting position [lng, lat]
+
+                zoom: 13 // starting zoom
+            });
+
+        });
+    </script>
+
+
+
+</body></html>
